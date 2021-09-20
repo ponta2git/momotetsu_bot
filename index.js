@@ -1,5 +1,5 @@
-import express from 'express'
-import Discord from 'discord.js'
+const express = require('express')
+const Discord = require('discord.js')
 
 const svr = express()
 const portNo = 8080
