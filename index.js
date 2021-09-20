@@ -1,15 +1,11 @@
-const express = require('express')
+const http = require('http')
+
+http.createServer((_, res) => {
+    res.write("alive!")
+    res.end()
+}).listen(8080)
+
 const Discord = require('discord.js')
-
-const svr = express()
-const portNo = 8080
-
-svr.get('/', (_, res) => {
-    res.send('alive!')
-})
-
-svr.listen(portNo)
-
 const client = new Discord.Client()
 
 client.on('ready', () => {
