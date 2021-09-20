@@ -22,11 +22,9 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    // if (msg.author.bot) return
-    if (msg.author.id === Discord.ClientUser.id) {
-        console.log("my message.")
-        return
-    }
+    if (msg.author.bot) return
+    if (msg.author.id === client.user.id) return
+    if (!msg.mentions.users.includes(client.user.id)) return
 
     parseMessage(msg)
 })
