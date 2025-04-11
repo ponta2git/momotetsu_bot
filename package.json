@@ -2,14 +2,18 @@
   "name": "momotetsu_bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "vitest run",
+    "start": "node index.mjs"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "discord.js": "12.5.3"
+    "discord.js": "^14.18.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.1"
   }
 }
